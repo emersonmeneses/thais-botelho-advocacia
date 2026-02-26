@@ -3,11 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thaís Botelho | Advocacia</title>
+<title>Thaís Botelho Advocacia</title>
 
+<!-- ====== FONTES ====== -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* ===================================================
+   1️⃣ CONFIGURAÇÕES GERAIS DO SITE
+=================================================== */
+
 :root{
 --vinho:#5a0f1c;
 --vinho-escuro:#3b0912;
@@ -26,47 +32,50 @@ background:var(--branco);
 color:#333;
 }
 
-/* HERO */
+/* ===================================================
+   2️⃣ HERO (CAPA COM IMAGEM DE FUNDO)
+=================================================== */
+
 .hero{
-background:var(--vinho);
-color:white;
+background:url('IMAGEM 03.jpeg') center center/cover no-repeat;
 text-align:center;
-padding:80px 20px;
+padding:120px 20px;
 position:relative;
+color:white;
 }
 
-.hero img.logo{
-width:220px;
-margin-bottom:30px;
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+z-index:0;
 }
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+/* ===== LOGO PRINCIPAL ===== */
 
 .perfil-container{
-position:relative;
 display:flex;
 justify-content:center;
-margin:30px 0;
-}
-
-.perfil-bg{
-position:absolute;
-width:260px;
-height:260px;
-background:url('fundo-perfil.jpg') center/cover no-repeat;
-border-radius:50%;
-opacity:0.2;
-z-index:1;
+margin:40px 0;
 }
 
 .perfil-img{
-position:relative;
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:cover;
-border:6px solid white;
-z-index:2;
-box-shadow:0 15px 40px rgba(0,0,0,.4);
+width:350px;
+max-width:90%;
+height:auto;
+object-fit:contain;
 }
+
+/* ===== FRASE PRINCIPAL ===== */
 
 .frase{
 margin-top:30px;
@@ -76,6 +85,8 @@ margin-left:auto;
 margin-right:auto;
 line-height:1.6;
 }
+
+/* ===== BOTÃO WHATSAPP ===== */
 
 .whatsapp-btn{
 margin-top:40px;
@@ -94,7 +105,10 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* SECTIONS */
+/* ===================================================
+   3️⃣ SEÇÕES PADRÃO
+=================================================== */
+
 section{
 padding:80px 20px;
 text-align:center;
@@ -111,6 +125,10 @@ max-width:1100px;
 margin:auto;
 }
 
+/* ===================================================
+   4️⃣ ÁREAS DE ATUAÇÃO (CARDS)
+=================================================== */
+
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -124,10 +142,13 @@ border-radius:10px;
 box-shadow:0 10px 25px rgba(0,0,0,.05);
 }
 
-/* CARROSSEL */
+/* ===================================================
+   5️⃣ CARROSSEL DE POSTS
+=================================================== */
+
 .carousel{
 overflow:hidden;
-max-width:900px;
+max-width:1000px;
 margin:auto;
 }
 
@@ -136,9 +157,17 @@ display:flex;
 animation:slide 15s infinite;
 }
 
+.carousel-track div{
+min-width:100%;
+display:flex;
+justify-content:center;
+}
+
 .carousel img{
-width:100%;
+max-width:100%;
+height:auto;
 border-radius:10px;
+object-fit:contain;
 }
 
 @keyframes slide{
@@ -148,88 +177,94 @@ border-radius:10px;
 100%{transform:translateX(0);}
 }
 
-/* FOOTER */
+/* ===================================================
+   6️⃣ RODAPÉ
+=================================================== */
+
 footer{
 background:var(--vinho-escuro);
 color:white;
 padding:40px 20px;
 text-align:center;
 }
+
 </style>
 </head>
 <body>
 
-<!-- 1 HERO -->
+<!-- ===================================================
+     HERO
+=================================================== -->
+
 <section class="hero">
-<img src="IMAGEM 03.JPEG" class="logo" alt="Logo Thaís Botelho">
+<div class="hero-content">
 
 <div class="perfil-container">
-<div class="perfil-bg"></div>
-<img src="LOGO SEM FUNDO.JPEG" class="perfil-img" alt="Foto Thaís Botelho">
+<img src="LOGO SEM FUNDO.png" class="perfil-img" alt="Thaís Botelho">
 </div>
 
 <p class="frase">
-"nós podemos te ajudar! conte com a equipe da thais botelho advocacia e assessoria juridica para assegura todos os seus direitos"
+Nós podemos te ajudar! Conte com a equipe da Thaís Botelho Advocacia e Assessoria Jurídica para assegurar todos os seus direitos.
 </p>
 
 <a href="https://wa.me/5579988027759" class="whatsapp-btn" target="_blank">
 Falar no WhatsApp
 </a>
-</section>
 
-<!-- 2 SOBRE -->
-<section>
-<div class="container">
-<h2>Sobre a Advogada</h2>
-<p>Nome Profissional</p>
-<p>Especialista em defesa de direitos e assessoria jurídica estratégica.</p>
 </div>
 </section>
 
-<!-- 3 COMO PODEMOS AJUDAR -->
-<section style="background:#f4f4f4;">
-<div class="container">
-<h2>Como podemos te ajudar?</h2>
-<div class="cards">
-<div class="card">Direito Civil</div>
-<div class="card">Direito Trabalhista</div>
-<div class="card">Direito Previdenciário</div>
-<div class="card">Consultoria Jurídica</div>
-</div>
-</div>
-</section>
+<!-- ===================================================
+     ÁREAS DE ATUAÇÃO
+=================================================== -->
 
-<!-- 4 ÁREAS -->
 <section>
 <div class="container">
 <h2>Áreas de Atuação</h2>
+
 <div class="cards">
-<div class="card">Ações Judiciais</div>
-<div class="card">Defesa de Direitos</div>
-<div class="card">Assessoria Empresarial</div>
+
+<div class="card">
+<h3>Direito Previdenciário</h3>
+<p>Aposentadorias, benefícios por incapacidade e revisões.</p>
+</div>
+
+<div class="card">
+<h3>Direito do Consumidor</h3>
+<p>Defesa contra cobranças indevidas e práticas abusivas.</p>
+</div>
+
+<div class="card">
+<h3>Direito Trabalhista</h3>
+<p>Rescisões, horas extras e direitos do trabalhador.</p>
+</div>
+
 </div>
 </div>
 </section>
 
-<!-- 5 DIFERENCIAL -->
-<section style="background:#f4f4f4;">
-<div class="container">
-<h2>Diferencial</h2>
-<p>Atendimento humanizado, estratégia jurídica personalizada e compromisso com resultados.</p>
-</div>
-</section>
+<!-- ===================================================
+     CARROSSEL DE CONTEÚDO
+=================================================== -->
 
-<!-- 6 DEPOIMENTOS -->
 <section>
 <div class="container">
-<h2>Depoimentos</h2>
+<h2>Conteúdos Informativos</h2>
 
 <div class="carousel">
 <div class="carousel-track">
 
-<div><img src="FEED01.JPEG"></div>
-<div><img src="FEED02.JPEG"></div>
-<div><img src="FEED03.JPEG"></div>
+<div>
+<img src="FEED01.png" alt="Post 1">
+</div>
+
+<div>
+<img src="FEED02.png" alt="Post 2">
+</div>
+
+<div>
+<img src="FEED03.png" alt="Post 3">
+</div>
 
 </div>
 </div>
@@ -237,30 +272,13 @@ Falar no WhatsApp
 </div>
 </section>
 
-<!-- 7 PROCESSO -->
-<section style="background:#f4f4f4;">
-<div class="container">
-<h2>Nosso Processo</h2>
-<div class="cards">
-<div class="card">Análise do Caso</div>
-<div class="card">Estratégia Jurídica</div>
-<div class="card">Execução e Acompanhamento</div>
-</div>
-</div>
-</section>
+<!-- ===================================================
+     RODAPÉ
+=================================================== -->
 
-<!-- 8 CONTATO -->
-<section>
-<div class="container">
-<h2>Contato</h2>
-<p>WhatsApp: (79) 98802-7759</p>
-<p>Email: contato@thaisbotelho.com</p>
-</div>
-</section>
-
-<!-- 9 RODAPÉ -->
 <footer>
-© 2026 Thaís Botelho Advocacia e Assessoria Jurídica - Todos os direitos reservados.
+<p>© 2026 Thaís Botelho Advocacia e Assessoria Jurídica</p>
+<p>WhatsApp: (79) 98802-7759</p>
 </footer>
 
 </body>
