@@ -5,147 +5,189 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thaís Botelho Advocacia</title>
 
-<!-- ====== FONTES ====== -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- ===================================================
+1️⃣ FONTES UTILIZADAS NO SITE
+=================================================== -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
 /* ===================================================
-   1️⃣ CONFIGURAÇÕES GERAIS DO SITE
+2️⃣ CONFIGURAÇÕES GERAIS
 =================================================== */
-
-:root{
---vinho:#5a0f1c;
---vinho-escuro:#3b0912;
---branco:#ffffff;
-}
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+:root{
+--vinho:#6e0d25;
+--vinho-escuro:#3d0615;
+--dourado:#c6a75e;
+--verde:#25D366;
 }
 
 body{
-background:var(--branco);
+background:#fff;
 color:#333;
 }
 
 /* ===================================================
-   2️⃣ HERO (CAPA COM IMAGEM DE FUNDO)
+3️⃣ NAVBAR FIXA SUPERIOR
 =================================================== */
-
-.hero{
-background:url('IMAGEM 03.jpeg') center center/cover no-repeat;
-text-align:center;
-padding:120px 20px;
-position:relative;
-color:white;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
+nav{
+position:fixed;
 width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
-z-index:0;
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-}
-
-/* ===== LOGO PRINCIPAL ===== */
-
-.perfil-container{
+top:0;
+padding:15px 8%;
 display:flex;
-justify-content:center;
-margin:40px 0;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(6px);
+z-index:999;
 }
 
-.perfil-img{
+nav img{
+height:55px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--dourado);
+}
+
+/* ===================================================
+4️⃣ HERO (CAPA PRINCIPAL)
+=================================================== */
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('IMAGEM 03.jpeg');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
+padding:20px;
+}
+
+.hero img{
 width:350px;
 max-width:90%;
-height:auto;
-object-fit:contain;
+margin-bottom:25px;
 }
 
-/* ===== FRASE PRINCIPAL ===== */
-
-.frase{
-margin-top:30px;
-font-size:18px;
+.hero p{
 max-width:700px;
-margin-left:auto;
-margin-right:auto;
-line-height:1.6;
+margin:20px 0;
+font-size:18px;
 }
 
-/* ===== BOTÃO WHATSAPP ===== */
-
-.whatsapp-btn{
-margin-top:40px;
-display:inline-block;
+/* BOTÃO PRINCIPAL */
+.btn{
+background:linear-gradient(45deg,var(--dourado),#e8c87a);
 padding:15px 35px;
-background:linear-gradient(135deg,#25D366,#128C7E);
-color:white;
+border-radius:40px;
+color:#000;
 font-weight:600;
-border-radius:50px;
 text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,.3);
-transition:0.3s;
+transition:.4s;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
-.whatsapp-btn:hover{
-transform:scale(1.05);
+.btn:hover{
+transform:translateY(-5px);
 }
 
 /* ===================================================
-   3️⃣ SEÇÕES PADRÃO
+5️⃣ SEÇÕES PADRÃO
 =================================================== */
-
 section{
-padding:80px 20px;
+padding:100px 8%;
+}
+
+.titulo{
 text-align:center;
-}
-
-section h2{
+font-family:'Playfair Display',serif;
+font-size:34px;
 color:var(--vinho);
-margin-bottom:40px;
-font-size:32px;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
+margin-bottom:50px;
 }
 
 /* ===================================================
-   4️⃣ ÁREAS DE ATUAÇÃO (CARDS)
+6️⃣ ÁREAS DE ATUAÇÃO
 =================================================== */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
 
-.cards{
+.card{
+background:var(--vinho);
+color:#fff;
+padding:35px;
+border-radius:15px;
+box-shadow:0 15px 35px rgba(0,0,0,.1);
+transition:.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card:before{
+content:'';
+position:absolute;
+width:6px;
+height:100%;
+left:0;
+top:0;
+background:var(--dourado);
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+/* ===================================================
+7️⃣ PROCESSO
+=================================================== */
+.processo{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
 
-.card{
-background:#f9f9f9;
+.step{
+background:#fff;
 padding:30px;
-border-radius:10px;
-box-shadow:0 10px 25px rgba(0,0,0,.05);
+border-radius:15px;
+box-shadow:0 15px 30px rgba(0,0,0,.07);
+text-align:center;
+transition:.4s;
+}
+
+.step:hover{
+transform:translateY(-8px);
 }
 
 /* ===================================================
-   5️⃣ CARROSSEL DE POSTS
+8️⃣ CARROSSEL FEEDS
 =================================================== */
-
 .carousel{
 overflow:hidden;
 max-width:1000px;
@@ -154,38 +196,70 @@ margin:auto;
 
 .carousel-track{
 display:flex;
-animation:slide 15s infinite;
+transition:transform .5s ease-in-out;
 }
 
-.carousel-track div{
+.carousel-track img{
 min-width:100%;
-display:flex;
-justify-content:center;
-}
-
-.carousel img{
-max-width:100%;
 height:auto;
-border-radius:10px;
-object-fit:contain;
-}
-
-@keyframes slide{
-0%{transform:translateX(0);}
-33%{transform:translateX(-100%);}
-66%{transform:translateX(-200%);}
-100%{transform:translateX(0);}
+border-radius:15px;
 }
 
 /* ===================================================
-   6️⃣ RODAPÉ
+9️⃣ CONTATO + MAPA
 =================================================== */
+.contato-info{
+display:grid;
+gap:20px;
+max-width:600px;
+margin:auto;
+font-size:17px;
+}
 
+.mapa{
+margin-top:50px;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 15px 30px rgba(0,0,0,.1);
+}
+
+/* ===================================================
+🔟 RODAPÉ
+=================================================== */
 footer{
-background:var(--vinho-escuro);
-color:white;
-padding:40px 20px;
+background:#000;
+color:#fff;
 text-align:center;
+padding:40px 10%;
+font-size:14px;
+}
+
+/* ===================================================
+1️⃣1️⃣ BOTÃO WHATSAPP FLUTUANTE
+=================================================== */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:var(--verde);
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+animation:pulse 2s infinite;
+z-index:999;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,.7);}
+70%{box-shadow:0 0 0 20px rgba(37,211,102,0);}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 
 </style>
@@ -193,93 +267,138 @@ text-align:center;
 <body>
 
 <!-- ===================================================
-     HERO
+NAVBAR
 =================================================== -->
+<nav>
+<img src="LOGO SEM FUNDO.png" alt="Logo">
+<div>
+<a href="#areas">Áreas</a>
+<a href="#processo">Processo</a>
+<a href="#contato">Contato</a>
+</div>
+</nav>
 
+<!-- ===================================================
+HERO
+=================================================== -->
 <section class="hero">
-<div class="hero-content">
-
-<div class="perfil-container">
-<img src="LOGO SEM FUNDO.png" class="perfil-img" alt="Thaís Botelho">
-</div>
-
-<p class="frase">
-Nós podemos te ajudar! Conte com a equipe da Thaís Botelho Advocacia e Assessoria Jurídica para assegurar todos os seus direitos.
-</p>
-
-<a href="https://wa.me/5579988027759" class="whatsapp-btn" target="_blank">
-Falar no WhatsApp
-</a>
-
-</div>
+<img src="LOGO SEM FUNDO.png" alt="Thaís Botelho">
+<p>Nós podemos te ajudar! Conte com a equipe da Thaís Botelho Advocacia e Assessoria Jurídica para assegurar todos os seus direitos.</p>
+<a id="whatsappTop" class="btn">Fale com Especialista</a>
 </section>
 
 <!-- ===================================================
-     ÁREAS DE ATUAÇÃO
+ÁREAS
 =================================================== -->
-
-<section>
-<div class="container">
-<h2>Áreas de Atuação</h2>
-
-<div class="cards">
-
+<section id="areas">
+<h2 class="titulo">Áreas de Atuação</h2>
+<div class="grid">
 <div class="card">
 <h3>Direito Previdenciário</h3>
 <p>Aposentadorias, benefícios por incapacidade e revisões.</p>
 </div>
-
 <div class="card">
 <h3>Direito do Consumidor</h3>
 <p>Defesa contra cobranças indevidas e práticas abusivas.</p>
 </div>
-
 <div class="card">
 <h3>Direito Trabalhista</h3>
 <p>Rescisões, horas extras e direitos do trabalhador.</p>
 </div>
+</div>
+</section>
 
+<!-- ===================================================
+PROCESSO
+=================================================== -->
+<section id="processo">
+<h2 class="titulo">Como Funciona</h2>
+<div class="processo">
+<div class="step">
+<h3>📞 Fale Conosco</h3>
+<p>Entre em contato pelo WhatsApp.</p>
+</div>
+<div class="step">
+<h3>⚖️ Análise</h3>
+<p>Analisamos seu caso com atenção.</p>
+</div>
+<div class="step">
+<h3>✅ Solução</h3>
+<p>Estratégia jurídica personalizada.</p>
 </div>
 </div>
 </section>
 
 <!-- ===================================================
-     CARROSSEL DE CONTEÚDO
+CARROSSEL FEEDS
 =================================================== -->
-
 <section>
-<div class="container">
-<h2>Conteúdos Informativos</h2>
-
+<h2 class="titulo">Conteúdos Informativos</h2>
 <div class="carousel">
 <div class="carousel-track">
-
-<div>
-<img src="FEED01.png" alt="Post 1">
+<img src="FEED01.png" alt="">
+<img src="FEED02.png" alt="">
+<img src="FEED03.png" alt="">
 </div>
-
-<div>
-<img src="FEED02.png" alt="Post 2">
-</div>
-
-<div>
-<img src="FEED03.png" alt="Post 3">
-</div>
-
-</div>
-</div>
-
 </div>
 </section>
 
 <!-- ===================================================
-     RODAPÉ
+CONTATO + SEU MAPA
 =================================================== -->
+<section id="contato">
+<h2 class="titulo">Fale Conosco</h2>
+<div class="contato-info">
+<div>📞 (79) 98802-7759</div>
+<div>📧 thaisbotelhoodv@gmail.com</div>
+<div>📍 Rua Maria Carmen Rodrigues Saker, 90 - Sorocaba/SP</div>
+</div>
 
+<div class="mapa">
+<iframe 
+src="https://www.google.com/maps?q=Rua+Maria+Carmen+Rodrigues+Saker+90+Sorocaba&output=embed"
+width="100%" 
+height="350" 
+style="border:0;" 
+allowfullscreen="">
+</iframe>
+</div>
+</section>
+
+<!-- ===================================================
+RODAPÉ
+=================================================== -->
 <footer>
-<p>© 2026 Thaís Botelho Advocacia e Assessoria Jurídica</p>
-<p>WhatsApp: (79) 98802-7759</p>
+Thaís Botelho Advocacia e Assessoria Jurídica © 2026 - Todos os Direitos Reservados.<br><br>
+Este site não faz parte do Google LLC nem do Facebook Inc. Não oferecemos serviços governamentais. Atuamos exclusivamente com serviços jurídicos.
 </footer>
+
+<!-- ===================================================
+WHATSAPP FLUTUANTE
+=================================================== -->
+<a id="whatsappFloat" class="whatsapp">💬</a>
+
+<!-- ===================================================
+SCRIPT (WHATSAPP + CARROSSEL)
+=================================================== -->
+<script>
+const whatsappNumber="5579988027759";
+const message="Olá, gostaria de falar com a advogada.";
+
+document.getElementById("whatsappTop").href=
+`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+document.getElementById("whatsappFloat").href=
+`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+const track=document.querySelector(".carousel-track");
+let index=0;
+
+setInterval(()=>{
+index=(index+1)%3;
+track.style.transform=`translateX(-${index*100}%)`;
+},4000);
+</script>
 
 </body>
 </html>
