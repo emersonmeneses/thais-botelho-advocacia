@@ -234,37 +234,58 @@ padding:40px 10%;
 font-size:14px;
 }
 
-/* ===================================================
-1️⃣1️⃣ BOTÃO WHATSAPP FLUTUANTE
-=================================================== */
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:var(--verde);
-width:65px;
-height:65px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-font-size:28px;
-text-decoration:none;
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-animation:pulse 2s infinite;
-z-index:999;
+<!-- ============================= -->
+<!-- BOTÃO FIXO WHATSAPP ORIGINAL -->
+<!-- ============================= -->
+
+<a href="https://wa.me/5599999999999" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Fale conosco pelo WhatsApp">
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+         alt="WhatsApp"
+         class="whatsapp-icon">
+
+</a>
+
+<style>
+
+/* ========================================= */
+/* CONFIGURAÇÃO PRINCIPAL DO BOTÃO FIXO */
+/* ========================================= */
+.whatsapp-float {
+    position: fixed;           /* Mantém fixo na tela */
+    width: 60px;               /* Tamanho do botão */
+    height: 60px;
+    bottom: 20px;              /* Distância da parte de baixo */
+    right: 20px;               /* Distância da direita */
+    background-color: #25D366; /* Cor oficial WhatsApp */
+    border-radius: 50%;        /* Deixa redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;             /* Fica acima dos outros elementos */
+    transition: 0.3s;
 }
 
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(37,211,102,.7);}
-70%{box-shadow:0 0 0 20px rgba(37,211,102,0);}
-100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+/* ========================================= */
+/* EFEITO AO PASSAR O MOUSE */
+/* ========================================= */
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* ========================================= */
+/* ÍCONE INTERNO */
+/* ========================================= */
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
 }
 
 </style>
-</head>
-<body>
 
 <!-- ===================================================
 NAVBAR
