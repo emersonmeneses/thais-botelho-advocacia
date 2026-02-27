@@ -126,14 +126,15 @@ gap:30px;
 }
 
 .card{
-background:var(--vinho);
+background:#000; /* fundo preto igual ao da logo */
 color:#fff;
 padding:35px;
 border-radius:15px;
-box-shadow:0 15px 35px rgba(0,0,0,.1);
+box-shadow:0 15px 35px rgba(0,0,0,.4);
 transition:.4s;
 position:relative;
 overflow:hidden;
+border:1px solid #d4af37; /* borda dourada */
 }
 
 .card:before{
@@ -143,10 +144,13 @@ width:6px;
 height:100%;
 left:0;
 top:0;
-background:var(--dourado);
+background:#d4af37; /* dourado semelhante à logo */
 }
 
-.card:hover{transform:translateY(-8px);}
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 45px rgba(212,175,55,.4); /* sombra dourada suave */
+}
 
 /* PROCESSO */
 .processo{
