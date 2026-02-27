@@ -285,6 +285,43 @@ font-size:15px;
 }
 
 }
+    /* ===================================================
+SEÇÕES ALTERNADAS (BRANCO / VINHO)
+=================================================== */
+
+.section-vinho{
+background:var(--vinho);
+color:#fff;
+}
+
+.section-vinho .titulo{
+color:#fff;
+}
+
+.section-branca{
+background:#fff;
+color:#333;
+}
+
+/* HISTÓRIA / SOBRE */
+.sobre-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.sobre-container img{
+width:100%;
+border-radius:15px;
+box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+@media (max-width:768px){
+.sobre-container{
+grid-template-columns:1fr;
+}
+}
 </style>
 </head>
 <body>
@@ -369,7 +406,35 @@ CARROSSEL FEEDS
 </div>
 </div>
 </section>
+</section>  <!-- última seção atual -->
 
+<!-- ===================================================
+SOBRE O ESCRITÓRIO
+=================================================== -->
+<section class="section-vinho">
+...
+</section>
+
+<section class="section-branca">
+...
+</section>
+
+<section class="section-vinho">
+...
+</section>
+
+<section class="section-branca">
+...
+</section>
+
+<section class="section-vinho">
+...
+</section>
+
+<!-- ===================================================
+CONTATO + SEU MAPA
+=================================================== -->
+<section id="contato">
 <!-- ===================================================
 CONTATO + SEU MAPA
 =================================================== -->
@@ -431,6 +496,109 @@ index=(index+1)%3;
 track.style.transform=`translateX(-${index*100}%)`;
 },4000);
 </script>
+<!-- ===================================================
+SOBRE O ESCRITÓRIO
+=================================================== -->
+<section class="section-vinho">
+<h2 class="titulo">Sobre o Escritório</h2>
 
+<div class="sobre-container">
+<div>
+<p>
+A Thaís Botelho Advocacia e Assessoria Jurídica atua com ética, compromisso e excelência,
+oferecendo atendimento personalizado e estratégico para cada cliente.
+</p>
+<br>
+<p>
+Nosso objetivo é garantir segurança jurídica e defender seus direitos com seriedade e responsabilidade.
+</p>
+</div>
+
+<div>
+<!-- COLE A FOTO AQUI -->
+<img src="SUA-FOTO-AQUI.jpg" alt="Foto do Escritório">
+</div>
+</div>
+</section>
+    <section class="section-branca">
+<h2 class="titulo">Missão, Visão e Valores</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Missão</h3>
+<p>Garantir justiça e segurança jurídica com atendimento humanizado.</p>
+</div>
+
+<div class="card">
+<h3>Visão</h3>
+<p>Ser referência em advocacia estratégica e eficiente.</p>
+</div>
+
+<div class="card">
+<h3>Valores</h3>
+<p>Ética, transparência, responsabilidade e compromisso com o cliente.</p>
+</div>
+</div>
+</section>
+    <section class="section-vinho">
+<h2 class="titulo">Nossos Diferenciais</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Atendimento Personalizado</h3>
+<p>Cada caso é tratado de forma única e estratégica.</p>
+</div>
+
+<div class="card">
+<h3>Transparência Total</h3>
+<p>Você acompanha cada etapa do seu processo.</p>
+</div>
+
+<div class="card">
+<h3>Agilidade</h3>
+<p>Respostas rápidas e soluções eficientes.</p>
+</div>
+</div>
+</section>
+    <section class="section-branca">
+<h2 class="titulo">Depoimentos</h2>
+
+<div class="grid">
+<div class="card">
+<p>"Profissional extremamente competente e atenciosa."</p>
+<strong>- Cliente</strong>
+</div>
+
+<div class="card">
+<p>"Resolvi meu problema com rapidez e segurança."</p>
+<strong>- Cliente</strong>
+</div>
+
+<div class="card">
+<p>"Atendimento excelente do início ao fim."</p>
+<strong>- Cliente</strong>
+</div>
+</div>
+</section>
+    <section class="section-vinho">
+<h2 class="titulo">Perguntas Frequentes</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Preciso agendar consulta?</h3>
+<p>Sim, o atendimento é feito mediante agendamento prévio.</p>
+</div>
+
+<div class="card">
+<h3>Atende online?</h3>
+<p>Sim, realizamos atendimentos presenciais e online.</p>
+</div>
+
+<div class="card">
+<h3>Como enviar documentos?</h3>
+<p>Os documentos podem ser enviados via WhatsApp ou e-mail.</p>
+</div>
+</div>
+</section>
 </body>
 </html>
