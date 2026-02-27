@@ -275,11 +275,31 @@ transition:.4s;
 }
 
 /* Ajuste para celular */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 26px; /* tamanho menor para mobile */
-    line-height: 1.4;
-  }
+@media (max-width:768px){
+
+nav{
+flex-direction:row; /* deixa lado a lado */
+padding:10px 5%;
+}
+
+nav img{
+height:40px; /* diminui logo */
+margin-bottom:0;
+}
+
+nav div{
+display:flex;
+gap:15px;
+}
+
+nav a{
+font-size:14px;
+}
+
+.hero{
+padding-top:90px; /* compensa altura do menu */
+}
+
 }
 
 /* Botão dentro da seção hero */
@@ -363,8 +383,8 @@ transition:.4s;
 <h2 class="titulo">Sobre o Escritório</h2>
 <div class="sobre-container">
 <div>
-<p>A Thaís Botelho Advocacia atua com ética e excelência.</p>
-<p>A Thaís Botelho Advocacia atua com ética, excelência e profundo comprometimento com cada cliente, oferecendo um atendimento humanizado, estratégico e totalmente personalizado. Cada caso é conduzido com responsabilidade, sigilo e dedicação, respeitando as particularidades e necessidades individuais de quem busca orientação jurídica.
+<p>A Thaís Maria Advocacia atua com ética e excelência.</p>
+<p>A Thaís Maria Advocacia atua com ética, excelência e profundo comprometimento com cada cliente, oferecendo um atendimento humanizado, estratégico e totalmente personalizado. Cada caso é conduzido com responsabilidade, sigilo e dedicação, respeitando as particularidades e necessidades individuais de quem busca orientação jurídica.
 
 Nosso objetivo é garantir segurança jurídica, proporcionando clareza em cada etapa do processo e atuando de forma preventiva e resolutiva. Trabalhamos com planejamento, técnica e firmeza na defesa dos direitos, sempre priorizando soluções eficazes, agilidade e transparência.
 
@@ -439,7 +459,7 @@ Acreditamos que o Direito deve ser exercido com sensibilidade, estratégia e com
 </div>
 
 <footer>
-Thaís Botelho Advocacia e Assessoria Jurídica © 2026 - Todos os Direitos Reservados.
+Thaís Maria Advocacia e Assessoria Jurídica © 2026 - Todos os Direitos Reservados.
 </footer>
 
 <a id="whatsappFloat" class="whatsapp">
