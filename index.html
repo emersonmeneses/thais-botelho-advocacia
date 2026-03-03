@@ -264,6 +264,36 @@
             animation: pulse 2s infinite;
             z-index: 999;
         }
+        .section-vinho {
+    padding: 80px 10%;
+    background: #5a0f1c; /* ajuste se quiser */
+    color: #fff;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.sobre-img,
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.4);
+}
+
+.sobre-texto p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
 
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, .7); }
@@ -273,6 +303,18 @@
         @media (max-width:768px){
 .hero{
 padding-top:100px;
+}
+            @media (max-width: 768px) {
+
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-img {
+        order: -1; /* FOTO PRIMEIRO */
+    }
+
 }
 }
     </style>
@@ -370,7 +412,27 @@ padding-top:100px;
         </div>
 
     </section>
+<section class="section-vinho">
 
+    <h2 class="titulo">Sobre o Escritório</h2>
+
+    <div class="sobre-container">
+
+        <div class="sobre-img">
+            <img src="foto adv.png" alt="Foto da Advogada">
+        </div>
+
+        <div class="sobre-texto">
+            <p>A Thaís Maria Advocacia atua com ética e excelência.</p>
+
+            <p>
+            A Thaís Maria Advocacia atua com ética, excelência e profundo comprometimento com cada cliente, oferecendo um atendimento humanizado, estratégico e totalmente personalizado...
+            </p>
+        </div>
+
+    </div>
+
+</section>
 
         </div>
     </section>
