@@ -156,6 +156,23 @@ border-radius:15px;
 text-align:center;
 }
 
+/* CARROSSEL */
+.carousel{
+overflow:hidden;
+max-width:1000px;
+margin:auto;
+}
+
+.carousel-track{
+display:flex;
+transition:transform .5s ease-in-out;
+}
+
+.carousel-track img{
+min-width:100%;
+border-radius:15px;
+}
+
 /* SOBRE */
 .sobre-container{
 display:flex;
@@ -219,18 +236,11 @@ z-index:999;
 
 /* RESPONSIVO */
 @media (max-width:768px){
-nav{
-padding:10px 5%;
-}
-
+nav{padding:10px 5%;}
 nav img{height:40px;}
-
 nav a{font-size:14px;}
-
 .hero h1{font-size:26px;}
-
 .hero h2{font-size:16px;}
-
 .sobre-container{
 flex-direction:column;
 text-align:center;
@@ -260,7 +270,7 @@ text-align:center;
 <section id="areas" class="section-branca">
 <h2 class="titulo">Áreas de Atuação</h2>
 <div class="grid">
-<div class="card"><h3>Direito Previdenciário</h3><p>Aposentadorias e benefícios.</p></div>
+<div class="card"><h3>Direito Previdenciário</h3><p>Aposentadorias, benefícios e revisões.</p></div>
 <div class="card"><h3>Direito do Consumidor</h3><p>Defesa contra cobranças indevidas.</p></div>
 <div class="card"><h3>Direito Trabalhista</h3><p>Rescisões e direitos do trabalhador.</p></div>
 </div>
@@ -270,8 +280,32 @@ text-align:center;
 <h2 class="titulo">Como Funciona</h2>
 <div class="processo">
 <div class="step"><h3>📞 Fale Conosco</h3><p>Entre em contato pelo WhatsApp.</p></div>
-<div class="step"><h3>⚖️ Análise</h3><p>Analisamos seu caso.</p></div>
-<div class="step"><h3>✅ Solução</h3><p>Estratégia personalizada.</p></div>
+<div class="step"><h3>⚖️ Análise</h3><p>Analisamos seu caso com atenção.</p></div>
+<div class="step"><h3>✅ Solução</h3><p>Estratégia jurídica personalizada.</p></div>
+</div>
+</section>
+
+<section class="section-branca">
+<h2 class="titulo">O que Dizem Nossos Clientes</h2>
+<div class="carousel">
+<div class="carousel-track">
+<img src="FEED01.png">
+<img src="FEED02.png">
+<img src="FEED03.png">
+</div>
+</div>
+</section>
+
+<section class="section-vinho">
+<h2 class="titulo">Sobre o Escritório</h2>
+<div class="sobre-container">
+<div>
+<p>A Thaís Maria Advocacia atua com ética, excelência e comprometimento.</p>
+<p>Oferecemos atendimento humanizado e estratégico, garantindo segurança jurídica e transparência em todas as etapas.</p>
+</div>
+<div>
+<img src="foto adv.png">
+</div>
 </div>
 </section>
 
@@ -279,7 +313,13 @@ text-align:center;
 <h2 class="titulo">Fale Conosco</h2>
 <div class="contato-info">
 <div>📞 (79) 98802-7759</div>
-<div>📧 thaismariadv@gmail.com</div>
+<div>📧 thaisMariadv@gmail.com</div>
+<div>📍 Av. Ministro Geraldo Barreto Sobral, 215 - Jardins, Aracaju - SE</div>
+</div>
+
+<div class="mapa">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.8332441871885!2d-37.062397925300196!3d-10.943267389215798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab3e98579c02d%3A0xeac25bc9180cda2!2sShopping%20Jardins!5e1!3m2!1spt-BR!2sbr!4v1772207935080!5m2!1spt-BR!2sbr"
+width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
 </section>
 
@@ -300,6 +340,14 @@ document.getElementById("whatsappTop").href =
 
 document.getElementById("whatsappFloat").href =
 `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+const track=document.querySelector(".carousel-track");
+let index=0;
+
+setInterval(()=>{
+index=(index+1)%3;
+track.style.transform=`translateX(-${index*100}%)`;
+},4000);
 </script>
 
 </body>
