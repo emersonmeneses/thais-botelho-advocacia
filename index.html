@@ -72,7 +72,7 @@ margin-bottom:30px;
 
        .hero{
 min-height:100vh;
-padding-top:70px;
+padding-top:120px; /* aumentei um pouco para descer do topo */
 background:
 linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
 url('IMAGEM 03.jpeg');
@@ -80,7 +80,7 @@ background-size:cover;
 background-position:center;
 display:flex;
 flex-direction:column;
-justify-content:center;
+justify-content:flex-start; /* AQUI FOI ALTERADO */
 align-items:center;
 text-align:center;
 color:#fff;
@@ -268,6 +268,11 @@ padding-right:20px;
             70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
+        @media (max-width:768px){
+.hero{
+padding-top:100px;
+}
+}
     </style>
 </head>
 
